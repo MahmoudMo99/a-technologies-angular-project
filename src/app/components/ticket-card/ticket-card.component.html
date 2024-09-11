@@ -1,0 +1,46 @@
+<div class="card text-center">
+  <div class="h-50">
+    <div class="d-flex align-items-center justify-content-center customize-card-header text-white">
+      <img class="trash-icon" src="assets/trash.svg" alt="Trash Icon">
+      <h5 class="pt-5 ms-3">عرض التذكرة الخاصة بالفيلم</h5>
+    </div>
+
+    <div class="card-body position-relative">
+      <div class="connecting-line"></div>
+
+      <div class="d-flex justify-content-center flex-column align-items-center">
+        <div class="customize-copy-text d-flex justify-content-evenly align-items-center my-4">
+          <span class="link-text ms-2">{{ linkText }}</span>
+          <img class="copy-icon" src="assets/copy-icon.svg" alt="Copy Icon" (click)="copyText()">
+        </div>
+        <p class="available-text w-100">فعال حتى 15 يوليو 2023</p>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="row d-flex align-items-center justify-content-between px-5  h-50 ">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-4">
+          <p class="m-0 sale">خصم </p>
+          <P class="text-white">25%</P>
+        </div>
+        <div class="col-8 pt-4">
+          <div class="send-container d-flex justify-content-center align-items-center">
+            <img class="send-icon" src="assets/send-2.svg" alt="">
+            <span class="text-white pe-3">مشاركة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 d-flex justify-content-end">
+      <qrcode [qrdata]="linkText" [width]="100" [errorCorrectionLevel]="'M'" cssClass="qrcode"></qrcode>
+    </div>
+  </div>
+
+
+</div>
